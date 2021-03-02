@@ -1,0 +1,134 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{algorithmic}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+\title{\vspace{-1.5cm}CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#5\\
+Due 5:00 pm Friday, December 6 via CatCourses}
+\date{}
+\maketitle
+
+\vspace{-1.5cm}
+
+\noindent Use LaTeX to prepare your solution as a PDF. Upload \emph{both} your PDF and your LaTeX file (hw5.pdf and hw5.tex, for example) to CatCourses. A number of students have had trouble at the last moment figuring out how to download the .pdf and .tex files from Overleaf for the homeworks. Make sure you know how to do this well ahead of the homework deadline. After you upload your files to CatCourses, make sure to download them to check that you have uploaded the correct versions.
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+State whether each of these functions \textbf{is} or \textbf{is not} $O(x^2)$. If you state that the function \textbf{is not} $O(x^2)$ then that's all you need to do. If you state that the function \textbf{is} $O(x^2)$ then find witnesses $C$ and $k$ such that $f(x) \leq Cg(x)$ where $g(x)=x^2$ when $x>k$.
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(x)=17x+11$
+\item $f(x)=x^2 + 1000$
+\item $f(x) = x \log_2 x$
+\item $f(x) = x^4 / 2$
+\item $f(x) = 3x^2$
+\end{enumerate}
+
+For example, the function in part (b) is $O(x^2)$. We can choose witnesses $C=1001$ and $k=1$ so that we'll have $x^2+1000 \leq 1001 x^2$ when $x>1$. Note that this choice of witnesses is not unique--there are infinitely many other choices. For example, we could pick $C=2$ and $k=31$ so that we'll have $x^2+1000 \leq 2 x^2$ when $x>31$.
+
+\item
+\textbf{Question 2:}
+
+Arrange the functions $(1.5)^n$, $n^{100}$, $(\log_2 n)^3$, $10^n$, $n!$, and $n^{99}$ so that each function is big-$O$ of the next function.
+
+\item
+\textbf{Question 3:}
+
+Give a big-$O$ estimate (in terms of $n$) for the number of additions used in this segment of an algorithm.
+
+\begin{algorithmic}
+\STATE $t := 0$
+\FOR {$i:=0$ to $n$} 
+    \FOR {$j:=0$ to $n$} 
+        \STATE $t:= t + 1$
+    \ENDFOR
+\ENDFOR
+\end{algorithmic}
+
+\item
+\textbf{Question 4}
+
+Suppose you have a computer which takes $10^{-9}$ seconds to perform a bit operation. What is the largest problem, in terms of $n$, that this computer can solve in one second using an algorithm that requires $f(n)$ bit operations if
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(n) = \log_2 n$
+\item $f(n) = n$
+\item $f(n) = n^2$
+\item $f(n) = 2^n$
+\item $f(n) = n!$
+\end{enumerate}
+
+Notes: Your answer for $n$ should be an integer since we are assuming our computer cannot perform fractional operations. You can leave your answer in exponential form if it is large.
+
+For example, the solution for part (c) is as follows. The computer can perform $10^9$ bit operations per second. Thus, we need to find the largest integer $n$ such that $n^2 \leq 10^9$. The answer is $n=31,622$ because $31,622^2 = 99,995,0884 \leq 10^9$ but $31,623^2 = 1,000,014,129 \nleq 10^9$.
+
+\item
+\textbf{Question 5}
+
+What are the quotient and remainder when 
+
+\begin{enumerate}[label=(\alph*)]
+\item 44 is divided by 8?
+\item 777 is divided by 21?
+\item -123 is divided by 19?
+\item -1 is divided by 23?
+\item -2002 is divided by 87?
+\item 0 is divided by 17?
+\item 1,234,567 is divided by 1001?
+\item -100 is divided by 101?
+\end{enumerate}
+
+Remember, the remainder must be non-negative.
+
+For example, the answer to (c) is as follows. We apply the division algorithm to find unique integers $q$ and $r$, with $0 \leq r < 19$, such that $-123 = 19q + r$. This results in $q=-7$ and $r=10$.
+
+\item
+\textbf{Question 6}
+
+What time does a 24-hour clock read 
+
+\begin{enumerate}[label=(\alph*)]
+\item 100 hours after it reads 2:00?
+\item 45 hours after it reads 12:00?
+\item 168 hours after it reads 19:00?
+\end{enumerate}
+
+For example, the answer to (b) is $(12+45) \bmod 24 = 57 \bmod 24 = 9 $ or 9:00.
+
+\item
+\textbf{Question 7}
+
+Decide whether each of these integers is congruent to 3 modulo 7.
+
+\begin{enumerate}[label=(\alph*)]
+\item 37
+\item 66
+\item -17
+\item -67
+\end{enumerate}
+
+For example, in part (b), we need to check whether $66 \equiv 3 \: (\bmod \: 7)$. Since 66 divided by 7 has remainder 3 then the answer is YES.
+
+\end{enumerate}
+
+\end{document}

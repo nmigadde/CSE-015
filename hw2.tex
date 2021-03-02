@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Nabir Migadde\\
+Lab CSE-015-04L F 4:30-7:20pm}
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Spring 2020\\
+Homework \#2\\}
+
+% Put today's date in the following.
+\date{February 13, 2020}
+\maketitle
+
+Knowledge Representation
+
+1. Let $p =$ It is cloudy, and let $q =$ It is raining, then $\lnot p \land \lnot q$
+
+2. Let $p =$ I like to eat apples, and let $q =$ I like to eat bananas, then $p \land q$
+
+3. Let $p =$ Behind the clouds, the sun is shining, then $p$
+
+4. Let $p =$ A function is differentiable, and let $q =$ A function is continuous, then $p \rightarrow q$
+
+5. Let $p =$ I will study for the final, and let $q =$ I will fail, then $p \land (\lnot p \rightarrow q)$
+
+Equivalence in Propositional Logic
+
+1. Not equivalent
+
+They are not equivalent because the truth columns on the truth table aren't the same. For $p \land q$ all the rows are False except the last one, while for $p \lor \lnot q$ its True False True False. 
+
+2. Not equivalent
+
+They are not equivalent because the truth columns on the truth table aren't the same. For $p \lor q$ and $\lnot p \lor \lnot q$ the truth columns are flipped from F,T,T,T to T,T,T,F.
+
+3. Equivalent
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \rightarrow q$ & $\lnot q \rightarrow \lnot p$\\
+\hline
+F & F & T & T & T & T\\
+F & T & T & F & T & T\\
+T & F & F & T & F & F\\
+T & T & F & F & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+4. Equivalent
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \rightarrow q$ & $\lnot p \lor q$\\
+\hline
+F & F & T & T & T & T\\
+F & T & T & F & T & T\\
+T & F & F & T & F & F\\
+T & T & F & F & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+5. Equivalent
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \land q$ &$\lnot(p \land q)$ & $\lnot p \lor \lnot q$\\
+\hline
+F & F & T & T & F & T & T\\
+F & T & T & F & F & T & T\\
+T & F & F & T & F & T & T\\
+T & T & F & F & T & F & F\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

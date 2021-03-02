@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Nabir Migadde\\
+Lab CSE-015-09L F 7:30-10:20am}
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#2\\
+Solution}
+
+% Put today's date in the following.
+\date{October 11, 2019}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+Every rabbit hops.
+
+\item
+Every animal is a rabbit and hops.
+
+\item
+There exists an animal such that if it is a rabbit, then it hops.
+
+\item
+There exists an animal such that it is a rabbit and hops. 
+
+\end{enumerate}
+
+\item
+\textbf{Question 2:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+True
+
+\item
+False
+
+\item
+True
+
+\item
+False
+
+\end{enumerate}
+
+\item
+\textbf{Question 3:}
+
+\begin{enumerate}[label=(\alph*)]
+ \item
+ Let S(x) be the statement "x has a cell phone" and let C(x) be the statement "x is in your class." First case: $\forall x (S(x))$ Second case: $\forall x(C(x) \rightarrow S(x))$
+ 
+ \item
+ Let S(x) be the statement "x has a foreign movie" and let C(x) be the statement "x is in your class." First case: $\exists x(S(x))$ Second case: $\exists x(C(x) \land S(x))$
+ 
+ \item
+ Let S(x) be the statement “x can swim” and let C(x) be the statement “x is in your class." First case: $\exists \lnot S(x)$ Second case: $\exists x (C(x) \land \lnot S(x))$
+ 
+ \item
+ Let S(x) be the statement "x can solve quadratic equations" and let C(x) be the statement "x is in your class." First case: $\forall x(S(x))$ Second case: $\forall x (C(x)\rightarrow (S(x))$
+    
+\end{enumerate}
+
+\item
+\textbf{Question 4:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+At least one student in your class has taken at least one computer science course. 
+
+\item
+Every student in your class has taken at least one computer science course. 
+
+\item
+All the computer science courses have been taken by some of the students in your class. 
+
+\end{enumerate}
+
+\item
+\textbf{Question 5:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+$\exists x \exists y Q(x,y)$
+
+\item
+$\forall x \forall y \lnot Q(x,y)$
+
+\end{enumerate}
+
+\item
+\textbf{Question 6:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+$\forall x \exists y F(x,y)$
+
+\item
+$\lnot \exists x \forall y F(x,y)$
+
+\item
+$\forall y \exists x F(x,y)$
+
+\end{enumerate}
+
+\item
+\textbf{Question 7:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+$\forall x \forall y (((x<0)\land(y<0)) \rightarrow ((x*y)>0))$
+
+\item
+$\forall x \forall y (((x>0) \land (y>0)) \rightarrow (((x+y)/2)>0))$
+
+\item
+$\forall x \forall y ((\left| x+y \right|) \leq (\left| x \right|+\left| y \right|))$
+
+\end{enumerate}
+
+\item
+\textbf{Question 8:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+False
+
+\item
+True
+
+\item
+False
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Nabir Migadde\\
+Lab CSE-015-04L F 4:30-7:20pm}
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Spring 2020\\
+Take Home Final\\}
+
+% Put today's date in the following.
+\date{May 6, 2020}
+\maketitle
+\begin{enumerate}
+
+\item
+Step 1: Pick any random prime number that are around the same range. $p$ and $q$
+
+Step 2: Calculate $n$ which is the product of $p$ and $q$. $n = p * q$
+
+$n$ is used as a the modulus. $n$ is part of the public key that is shared. 
+
+Step 3: Calculate $\varphi (n)$ which is the product of (p - 1) and (q - 1). $\varphi (n) = (p-1)(q-1)$
+
+$\varphi (n)$ is used to generate the private key. 
+
+Step 4: Pick an odd number that doesn't share a factor with $\varphi (n)$ or n. $e$ is that number. 
+
+$e$ is used to generate the private key and is part of the public key that is shared. 
+
+$n$ and $e$ are the public key. 
+
+Step 5: Calculate $d$ which is the solution of ($k$*$\varphi (n)$+1)/$e$. $k$ is any integer. 
+
+$d$ is the private key. 
+
+------
+
+Now using these steps
+
+1. p = 53 and q = 59, prime numbers
+
+2. n = p * q, 53*59 = 3127
+
+3. $\varphi (n) = (p-1)(q-1)$, (52)(58) = 3016
+
+4. e = 3, an odd number that doesn't share a factor with $\varphi (n)$ or $n$.
+
+Public key is $n = 3127$ and $e = 3$
+
+5. $d = (k * \varphi (n) + 1)/e$, $k = 2$, (2 * 3016 + 1)/3 = 2011
+
+Private key is $d = 2011$
+
+
+\item
+Prime Factorization makes RSA encryption secure. In order for someone who doesn't have the private key to decode the message, that person would  have to use trial and error to figure out what are the prime factors of $n$. Since that person only has $n$ and $e$ that person needs to find the exact prime factor, $p$ and $q$, of $n$ in order to figure out $\varphi (n)$ which is then used to figure out $d$ in order to decode the message. In order to ensure that this is difficult the prime numbers, $p$ and $q$, used to make $n$ should be very large. When $p$ and $q$ are large, $n$ is also very large, which makes finding the exact factors even harder. The process of calculating $d$ becomes very hard and time-consuming the larger N is, thus making it difficult and making RSA secure. 
+
+
+\end{enumerate}
+
+\end{document}

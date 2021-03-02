@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+\title{\vspace{-1.5cm}CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#4\\
+Due 5:00 pm Friday, November 15 via CatCourses}
+\date{}
+\maketitle
+
+\vspace{-1.5cm}
+
+\noindent Use LaTeX to prepare your solution as a PDF. Upload \emph{both} your PDF and your LaTeX file (hw4.pdf and hw4.tex, for example) to CatCourses. A number of students have had trouble at the last moment figuring out how to download the .pdf and .tex files from Overleaf for the homeworks. Make sure you know how to do this well ahead of the homework deadline. After you upload your files to CatCourses, make sure to download them to check that you have uploaded the correct versions.
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+Find the domain and range of these functions. Note that in each case, to find the domain, determine the set of elements that are assigned values by the function.
+
+\begin{enumerate}[label=(\alph*)]
+\item The function that assigns to each nonnegative integer its last digit.
+\item The function that assigns the next largest integer to a positive integer.
+\item The function that assigns to a bit string the number of one bits in the string.
+\item The function that assigns to a bit string the number of bits in the string.
+\end{enumerate}
+
+For example, the domain for part (c) is the set of bit strings (of any length). (Remember, a bit string is a string made up of just 0s and 1s.) The range is the set of nonnegative integers: $\{0, 1, 2, \ldots\}$. That is, the number of 1s in a bit string can be $0,1,2,\ldots$.
+
+\item
+\textbf{Question 2:}
+
+Determine whether the function $ f: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} $ is onto if
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(m,n) = 2m-n$
+\item $f(m,n) = m^2 - n^2$
+\item $f(m,n) = m + n + 1$
+\item $f(m,n) = \left| m \right| - \left| n \right|$
+\item $f(m,n) = m^2 - 4$
+\end{enumerate}
+
+Note: $ \mathbb{Z} \times \mathbb{Z}$ is the set of pairs $(m,n)$ where $m$ and $n$ are integers.
+
+For example, the function in part (c) is onto because for any $p \in \mathbb{Z}$, you can find an $m \in \mathbb{Z}$ and an $n \in \mathbb{Z}$ such that $m + n + 1 = p$.
+
+\item
+\textbf{Question 3:}
+
+Consider these functions from the set of students in a discrete mathematics class. State under what conditions is the function one-to-one if it assigns to a student the following things below. Also state how likely this is in practice.
+
+\begin{enumerate}[label=(\alph*)]
+\item Mobile phone number.
+\item Student identification number.
+\item Final grade in the class.
+\item Home town.
+\end{enumerate}
+
+For example, the function in part (c) is one-to-one if each student has a unique student identification number. In other words, if no two students share the same student identification number. This is usually the case in practice since identification numbers are usually used to identify a unique student.
+
+\textbf{Question 4}
+
+Determine whether each of these functions is a bijection from $\mathbb{R}$ to  $\mathbb{R}$.
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(x) = - 3 x + 4$
+\item $f(x) = -3 x^2 + 7$
+\item $f(x) = (x+1) / (x+2)$
+\item $f(x) = x^3$
+\end{enumerate}
+
+Note: $\mathbb{R}$ is the set of real numbers. A bijection is a function that is both one-to-one and onto.
+
+For example, the function in part (b) is not a bijection because it is not onto. It is not onto because there exists at least one $y \in \mathbb{R}$ such that you cannot find an $x \in \mathbb{R}$ where $f(x) = y$. One such example is $y=8$. (The function is also not one-to-one because $f(1) = 4 = f(-1)$.)
+
+
+\end{enumerate}
+
+\end{document}

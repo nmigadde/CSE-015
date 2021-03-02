@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Nabir Migadde\\
+Lab CSE-015-04L F 4:30-7:20pm}
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Spring 2020\\
+Homework \#3\\}
+
+% Put today's date in the following.
+\date{February 28, 2020}
+\maketitle
+
+Knights and Knaves
+
+\begin{enumerate}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Case & P & Q \\
+\hline
+1 & Knight & Knight \\
+2 & Knave & Knight \\
+3 & Knight & Knave \\
+4 & Knave & Knave \\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+Knave: always tells lie
+
+Knight: always tells truth
+
+Looking at the truth table, it can be seen that P's statement is false for case 1 and True for cases 2,3, and 4. If P is a Knight then what he says would be true, that means case 1 can't happen but case 3 can. If P is a Knave, whatever he would say must be False, meaning neither case 2 nor case 4 can happen as Knave always lie. Thus the only possible case is Row 3 and therefore P is a Knight and Q is a Knave.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Case & A & B \\
+\hline
+1 & Knight & Knight \\
+2 & Knave & Knight \\
+3 & Knight & Knave \\
+4 & Knave & Knave \\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+Knave: always tells lie
+
+Knight: always tells truth
+
+Its the same thing, because its the same truth table. So, A's statement is false for the case 1 and True for the cases 2,3, and 4. If A is a Knight then what he says would be true, that means case 1 and case 3 can't happen. If A is a knave then what he says would be False, this means case 4 can't happen. The only possibility is that A is a Knave and B is a Knight, as in, case 2 is the only possible scenario.
+
+\end{enumerate}
+
+
+Logical Identities
+
+\begin{enumerate}
+
+\item
+$\lnot(p \rightarrow (q \rightarrow p))$
+
+Implication law, $q \rightarrow p \equiv \lnot q \lor p$
+
+$\lnot(p \rightarrow (\lnot q \lor p))$
+
+Implication law 
+$\lnot(\lnot p \lor (\lnot q \lor p))$
+
+De Morgan's Law
+$\lnot(\lnot p) \land \lnot (\lnot q \lor p)$
+
+De Morgan's Law
+$\lnot(\lnot p) \land \lnot (\lnot q) \land \lnot p$
+
+Double Negation Law 
+$\lnot(\lnot p) \equiv p$
+
+$p \land q \land \lnot p$
+
+$p \land \lnot p \land q$
+
+$p \land \lnot \equiv False$ , thus
+
+False $\land q$
+
+$\equiv q$
+
+\item
+$\lnot((p \land q) \rightarrow (q \lor p))$
+
+Let $(p \land q)$ be a, $(q \lor p)$ be b
+
+Implication Law, $p \rightarrow q \equiv \lnot p \lor q$
+
+$\lnot a \lor b$
+
+which is $\lnot(p \land q) \lor (q \lor p)$
+
+De Morgan's Law, $\lnot (p \land q) \equiv \lnot p \lor \lnot q$
+
+$\lnot p \lor \lnot q \lor (q \lor p)$
+
+Associative Law, 
+$(\lnot p \lor p) \lor (\lnot q \lor q)$
+
+Negation Laws, $p \lor \lnot p \equiv True$
+
+True $\lor$ True
+
+$\equiv True$
+
+\end{enumerate}
+
+Logical Equivalences
+\begin{enumerate}
+
+\item
+$p \rightarrow (q \rightarrow r)$ and $(p \land q) \rightarrow r$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $q \rightarrow r$ & $p \rightarrow (q \rightarrow r)$\\
+\hline
+F & F & F & T & T\\
+F & F & T & T & T\\
+F & T & F & F & T\\
+F & T & T & T & T\\
+T & F & F & T & T\\
+T & F & T & T & T\\
+T & T & F & F & F\\
+T & T & T & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \land q$ & $(p \land q) \rightarrow r$\\
+\hline
+F & F & F & T & T\\
+F & F & T & T & T\\
+F & T & F & F & T\\
+F & T & T & T & T\\
+T & F & F & T & T\\
+T & F & T & T & T\\
+T & T & F & F & F\\
+T & T & T & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+The truth tables are the same. Therefore the propositions are equivalent.
+
+\item
+$p \rightarrow (q \rightarrow r)$ and $(p \rightarrow q) \rightarrow r$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $q \rightarrow r$ & $p \rightarrow (q \rightarrow r)$\\
+\hline
+F & F & F & T & T\\
+F & F & T & T & T\\
+F & T & F & F & T\\
+F & T & T & T & T\\
+T & F & F & T & T\\
+T & F & T & T & T\\
+T & T & F & F & F\\
+T & T & T & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \rightarrow q$ & $(p \rightarrow q) \rightarrow r$\\
+\hline
+F & F & F & T & F\\
+F & F & T & T & T\\
+F & T & F & T & F\\
+F & T & T & T & T\\
+T & F & F & F & T\\
+T & F & T & F & T\\
+T & T & F & T & F\\
+T & T & T & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+The truth tables are not the same. Therefore the propositions are not equivalent.
+
+\end{enumerate}
+
+Logical Consequences
+
+\begin{enumerate}
+
+\item
+Jimmy is smart
+
+If Jimmy then smart
+
+Jimmy $\rightarrow$ smart
+
+Smart people are rich
+
+If smart then rich
+
+Smart $\rightarrow$ rich
+
+Therefore, Jimmy $\rightarrow$ rich because of transitivity. Jimmy is rich.
+
+\item
+Islands are surrounded by water
+
+If island then surrounded by water
+
+Island $\rightarrow$ surrounded by water
+
+Puerto Rico is surrounded by water
+
+Puerto Rico $\rightarrow$ surrounded by water
+
+Puerto Rico could not always be an island. Therefore we cannot say Puerto Rico is an island is always True. 
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+\title{CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#2\\
+Due 5:00 pm Friday, October 11 via CatCourses}
+
+\date{}
+
+\maketitle
+
+\noindent Use LaTeX to prepare your solution as a PDF. Upload \emph{both} your PDF and your LaTeX file (hw2.pdf and hw2.tex, for example) to CatCourses. A number of students had trouble at the last moment figuring out how to download the .pdf and .tex files from Overleaf for homework 1. Make sure you know how to do this well ahead of the homework deadline.
+
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+Translate these statements into English where $R(x)$ is ``$x$ is a rabbit'' and $H(x)$ is ``$x$ hops'' and the domain consists of all animals. (You just need to write the English sentence. You don't need to determine whether it is true or not.)
+
+\begin{enumerate}[label=(\alph*)]
+\item $\forall x (R(x) \rightarrow H(x))$
+\item $\forall x (R(x) \land H(x))$
+\item $\exists x (R(x) \rightarrow H(x))$
+\item $\exists x (R(x) \land H(x))$
+\end{enumerate}
+
+For example, the answer to (c) is ``There exists an animal such that if it is a rabbit, then it hops.''
+
+\item
+\textbf{Question 2:}
+
+Determine the truth value of each of these statements if the domain of each variable consists of all real numbers.
+\begin{enumerate}[label=(\alph*)]
+\item $\exists x (x^2 = 2)$
+\item $\exists x (x^2 = -1)$
+\item $\forall x (x^2 + 2 \geq 1)$
+\item $\forall x (x^2 \neq x)$
+\end{enumerate}
+
+For example, the answer to (b) is false. (Note that $\sqrt{-1}$ is not a real number.)
+
+\item
+\textbf{Question 3:}
+
+Translate each of these statement \emph{in two ways} into logical expressions using predicates, quantifiers, and logical connectives. First, let the domain consist of the students in your class and second, let it consist of all people.
+
+\begin{enumerate}[label=(\alph*)]
+\item Everyone in your class has a cell phone.
+\item Somebody in your class has seen a foreign movie.
+\item There is a person in your class who cannot swim.
+\item All the students in your class can solve quadratic equations.
+\end{enumerate}
+
+For example, the solution to (c) could be the following. Let $S(x)$ be the statement ``$x$ can swim.'' Then, for the first case where the domain is all the students in your class, the logical expression is $\exists \lnot S(x)$. For the second case where the domain is all people, let $C(x)$ be the statement ``$x$ is in your class'' and the logical expression is $\exists x (C(x) \land \lnot S(x)$. 
+
+\item
+\textbf{Question 4:}
+
+Let $P(x,y)$ be the statement ``Student $x$ has taken class $y$'' where the domain for $x$ consists of all students in your class and for $y$ consists of all computer science courses at your school. Express each of these quantifications in English.
+
+\begin{enumerate}[label=(\alph*)]
+\item $\exists x \exists y P(x,y)$
+\item $\forall x \exists y P(x,y)$
+\item $\forall y \exists x P(x,y)$
+\end{enumerate}
+
+For example, the solution to (b) is ``Every student in your class has taken at least one computer science course.'' (There are, of course, other ways to say this.)
+
+\item
+\textbf{Question 5:}
+
+Let $Q(x,y)$ be the statement ``Student $x$ has been a contestant on quiz show $y$.'' Express each of these sentences in terms of $Q(x,y)$, quantifiers, and logical connectives, where the domain for $x$ consists of all students at your school and for $y$ consists of all quiz shows on television.
+
+\begin{enumerate}[label=(\alph*)]
+\item There is a student at your school who has been a contestant on a television quiz show.
+\item No student at your school has ever been a contestant on a television show.
+\end{enumerate}
+
+For example, the solution to (b) is $\forall x \forall y \lnot Q(x,y)$.
+
+\item
+\textbf{Question 6:}
+
+Let $F(x,y)$ be the statement ''$x$ can fool $y$'' where the domain consists of all people in the world. Use quantifiers to express each of these statements.
+
+\begin{enumerate}[label=(\alph*)]
+\item Everybody can fool somebody.
+\item There is no one who can fool everybody.
+\item Everyone can be fooled by somebody.
+\end{enumerate}
+
+For example, the solution to (b) is $\lnot \exists x \forall y F(x,y)$. (Note that this is equivalent to $\forall x \exists y \lnot F(x,y)$. This can be shown using De Morgan's laws.)
+
+\item
+\textbf{Question 7:}
+
+Express each of these statements using predicates, quantifiers, logical connectives, and mathematical operators where the domain consists of all integers.
+
+\begin{enumerate}[label=(\alph*)]
+\item The product of two negative numbers is positive.
+\item The average of two positive numbers is positive.
+\item The absolute value of the sum of two integers does not exceed the sum of the absolute values of these integers.
+\end{enumerate}
+
+Note, that to express the absolute value of $x$ (i.e., $\left| x \right|$) in LaTeX, use \verb!\left| x \right|!.
+
+For example, the solution to (b) is $\forall x \forall y (((x>0) \land (y>0)) \rightarrow (((x+y)/2)>0))$.
+
+\item
+\textbf{Question 8:}
+
+Determine the truth value of each of these statements if the domain of each variable consists of all real numbers.
+
+\begin{enumerate}[label=(\alph*)]
+\item $\forall x \exists y (x=y^2)$
+\item $\forall x \exists y (x+y=1)$
+\item $\exists x \exists y ((x+2y=2) \land (2x+4y=5))$
+\end{enumerate}
+
+For example, the solution to (a) is false. (If $x=-1$ then there does not exist a real number $y$ such that $x=y^2$. Remember, $\sqrt{-1}$ is not a real number.)
+
+\end{enumerate}
+
+\end{document}

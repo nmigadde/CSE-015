@@ -1,0 +1,255 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Nabir Migadde\\
+Lab CSE-015-09L F 7:30-10:20am}
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#1\\
+Solution}
+
+% Put today's date in the following.
+\date{September 20, 2019}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+It is not the case I bought a lottery ticket this week.
+
+\item
+If I bought a lottery ticket this week, then I won the million dollar jackpot on Friday.
+
+\item
+I bought a lottery ticket this week, and I won the million dollar jackpot on Friday.
+
+\item
+I bought a lottery ticket if and only if I won the million dollar jackpot on Friday.
+
+\item
+If I did not buy a lottery ticket this week, then I did not win the million dollar jackpot on Friday.
+
+\end{enumerate}
+
+\item
+\textbf{Question 2:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+$r \land \lnot p$
+
+\item
+$p \land q \land r$
+
+\item
+$r \rightarrow p$
+
+\item
+$(p \land \lnot q) \land r$
+
+\item
+$(p \land q) \rightarrow r$
+
+\item
+$r \leftrightarrow (q \lor p)$
+
+\end{enumerate}
+
+\item
+\textbf{Question 3:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$p$ & $\lnot p$ \\
+\hline
+T & F\\
+F & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $\lnot p$ & $p \leftrightarrow \lnot p$\\
+\hline
+T & F & F\\
+F & T & F\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ & $p \lor q$ & $(p \land q) \rightarrow (p \lor q)$\\
+\hline
+T & T & T & T & T\\
+T & F & F & T & T\\
+F & T & F & T & T\\
+F & F & F & F & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $q \rightarrow \lnot p$ & $p \leftrightarrow q$ & $(q \rightarrow \lnot p) \leftrightarrow (p \leftrightarrow q)$\\
+\hline
+T & T & F & F & T & T & F\\
+T & F & F & T & T & F & F\\
+F & T & T & F & T & F & F\\
+F & F & T & T & F & T & T\\
+T & T & T & T & F & F & T\\
+F & T & F & T & F & T & T\\
+F & F & F & F & T & F & T\\
+\hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\item
+\textbf{Question 4:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+$r \lor \lnot p$
+
+\item
+$(r \lor p) \rightarrow q$
+
+\item
+$\lnot r \rightarrow \lnot p$
+
+\item
+$(\lnot p \lor r) \rightarrow q$
+
+\end{enumerate}
+
+\item
+\textbf{Question 5:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \lor q$ & $(p \lor q) \lor r$ & $q \lor r$ & $p \lor (q \lor r)$\\
+\hline
+T & T & T & T & T & T & T\\
+T & T & F & T & T & T & T\\
+T & F & T & T & T & T & T\\
+T & F & F & T & T & F & T\\
+F & T & T & T & T & T & T\\
+F & T & F & T & T & T & T\\
+F & F & T & F & T & T & T\\
+F & F & F & F & F & F & F\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \land q$ & $(p \land q) \land r$ & $q \land r$ & $p \land (q \land r)$\\
+\hline
+T & T & T & T & T & T & T\\
+T & T & F & T & F & F & F\\
+T & F & T & F & F & F & F\\
+T & F & F & F & F & F & F\\
+F & T & T & F & F & T & F\\
+F & T & F & F & F & F & F\\
+F & F & T & F & F & F & F\\
+F & F & F & F & F & F & F\\
+\hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\item
+\textbf{Question 6:}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot p \land (p \lor q)$ & $[\lnot p \land (p \lor q)] \rightarrow q$\\
+\hline
+T & T & F & F & T & F & T\\
+T & T & T & T & T & T & T\\
+T & F & F & T & T & F & T\\
+T & F & T & F & T & T & F\\
+F & T & T & F & T & T & T\\
+F & T & F & T & T & F & T\\
+F & F & T & T & F & F & F\\
+F & F & F & F & F & F & F\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \rightarrow q$ & $q \rightarrow r$ & $p \rightarrow r$ & $(p \rightarrow q) \land (q \rightarrow r)$ & $[(p \rightarrow q) \land (q \rightarrow r)] \rightarrow (p \rightarrow r)$\\
+\hline
+T & T & T & T & T & T & T & T\\
+T & T & F & T & F & F & F & T\\
+T & F & T & F & T & T & F & T\\
+T & F & F & F & T & F & F & T\\
+F & T & T & T & T & T & T & T\\
+F & T & F & T & F & T & F & T\\
+F & F & T & T & T & T & T & T\\
+F & F & F & T & T & T & T & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \rightarrow q$ & $p \land (p \rightarrow q)$ & $[p \land (p \rightarrow q)] \rightarrow q$\\
+\hline
+T & T & T & T & T\\
+T & F & F & F & T\\
+F & T & T & F & T\\
+F & F & T & F & T\\
+\hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

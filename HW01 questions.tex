@@ -1,0 +1,176 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+\title{CSE 015: Discrete Mathematics\\
+Fall 2019\\
+Homework \#1\\
+Due 5:00 pm Friday, September 20 via CatCourses}
+
+\date{}
+
+\maketitle
+
+\noindent Use LaTeX as described in lecture to prepare your solution as a PDF. Upload \emph{both} your PDF and your LaTeX file (hw1.tex, for example) to CatCourses.
+
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item
+\textbf{Question 1:}
+
+Let $p$ and $q$ be the propositions
+
+\begin{itemize}
+  \item[] $p$: I bought a lottery ticket this week.
+  \item[] $q$: I won the million dollar jackpot on Friday.
+\end{itemize}
+
+Express each of the following propositions as an English sentence.
+
+\begin{enumerate}[label=(\alph*)]
+\item $\lnot p$
+\item $p \rightarrow q$
+\item $p \land q$
+\item $p \leftrightarrow q$
+\item $\lnot p \rightarrow \lnot q$
+\end{enumerate}
+
+For example, the answer to (c) is ``I bought a lottery ticket this week, and I won the million dollar jackpot on Friday.''
+
+\item
+\textbf{Question 2:}
+
+Let $p$, $q$, and $r$ be the propositions
+
+\begin{itemize}
+  \item[] $p$: You get an A on the final exam.
+  \item[] $q$: You do every exercise in the homeworks.
+  \item[] $r$: You get an A in this class.
+\end{itemize}
+
+Write these propositions using $p$, $q$, and $r$ and logical connectives (including negations).
+
+\begin{enumerate}[label=(\alph*)]
+\item You get an A in this class, but you do not do every exercise in the homeworks.
+\item You get an A on the final, you do every exercise in the homeworks, and you get an A in this class.
+\item To get an A in this class, it is necessary for you to get an A on the final.
+\item You get an A on the final, but you don't do every exercise in the homeworks; nevertheless you get an A in this class.
+\item Getting an A on the final and doing every exercise in the homeworks is sufficient for getting an A in this class.
+\item You will get an A in this class if an only if you either do every exercise in the homeworks or you get an A on the final.
+\end{enumerate}
+
+For example, the answer to (c) is $r \rightarrow p$.
+
+\item
+\textbf{Question 3:}
+
+Construct a truth table for each of these compound propositions. Make sure to include columns for the intermediate results.
+
+\begin{enumerate}[label=(\alph*)]
+\item $p \rightarrow \lnot p$
+\item $p \leftrightarrow \lnot p$
+\item $(p \land q) \rightarrow (p \lor q)$
+\item $(q \rightarrow \lnot p) \leftrightarrow (p \leftrightarrow q)$
+\end{enumerate}
+
+For example, the solution to (c) is (the third and fourth columns are the intermediate results)
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ & $p \lor q$ & $(p \land q) \rightarrow (p \lor q)$\\
+\hline
+T & T & T & T & T\\
+T & F & F & T & T\\
+F & T & F & T & T\\
+F & F & F & F & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\textbf{Question 4:}
+
+Express these system specifications using the propositions $p$ ``The user enters valid password,'' $q$ ``Access is granted,'' and $r$ ``The user has paid the subscription fee'' and logical connectives (including negation).
+
+\begin{enumerate}[label=(\alph*)]
+\item ``The user has paid the subscription fee, but does not enter a valid password.''
+\item ``Access is granted whenever the user has paid the subscription fee and enters a valid password.''
+\item ``Access is denied if the user has not paid the subscription fee.''
+\item ``If the user has not entered a valid password but has paid the subscription fee, then access is granted.''
+\end{enumerate}
+
+For example, the answer to (b) is $(r \land p) \rightarrow q$.
+
+\item
+\textbf{Question 5:}
+
+Use truth tables to verify the associative laws. That is, show that the compound proposition on the left always has the same value as the compound proposition on the right regardless (for all possible) assignments of the propositional variables. Make sure to include columns for the intermediate results.
+
+\begin{enumerate}[label=(\alph*)]
+\item $(p \lor q) \lor r \equiv p \lor (q \lor r)$
+\item $(p \land q) \land r \equiv p \land (q \land r)$
+\end{enumerate}
+
+For example, the truth table corresponding to (a) is shown below. The two compound propositions are shown to be equivalent since they have the same value for all possible assignments of the propositional variables. The fourth and sixth columns are the intermediate results.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \lor q$ & $(p \lor q) \lor r$ & $q \lor r$ & $p \lor (q \lor r)$\\
+\hline
+T & T & T & T & T & T & T\\
+T & T & F & T & T & T & T\\
+T & F & T & T & T & T & T\\
+T & F & F & T & T & F & T\\
+F & T & T & T & T & T & T\\
+F & T & F & T & T & T & T\\
+F & F & T & F & T & T & T\\
+F & F & F & F & F & F & F\\
+\hline
+\end{tabular}
+\end{center}
+
+\item
+\textbf{Question 6:}
+
+Show that each of these conditional statements is a tautology by using truth tables. That is, show that the statement is true regardless (for all possible) assignments of the propositional variables. Make sure to include columns for the intermediate results.
+
+\begin{enumerate}[label=(\alph*)]
+\item $[\lnot p \land (p \lor q)] \rightarrow q$
+\item $[(p \rightarrow q) \land (q \rightarrow r)] \rightarrow (p \rightarrow r)$
+\item $[p \land (p \rightarrow q)] \rightarrow q$
+\end{enumerate}
+
+For example, for (c), the conditional statement is shown to be a tautology (is true for all possible assignments of the propositional variables) though the following truth table. The second and third columns are the intermediate results.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \rightarrow q$ & $p \land (p \rightarrow q)$ & $[p \land (p \rightarrow q)] \rightarrow q$\\
+\hline
+T & T & T & T & T\\
+T & F & F & F & T\\
+F & T & T & F & T\\
+F & F & T & F & T\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{enumerate}
+
+\end{document}
